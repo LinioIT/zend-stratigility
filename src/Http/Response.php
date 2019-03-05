@@ -306,7 +306,7 @@ class Response implements
      * {@inheritdoc}
      * @throws RuntimeException if response is already completed
      */
-    public function withStatus($code, $reasonPhrase = null)
+    public function withStatus($code, $reasonPhrase = '')
     {
         if ($this->complete) {
             throw $this->responseIsAlreadyCompleted(__METHOD__);
